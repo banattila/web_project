@@ -3,21 +3,48 @@
 <head>
     <meta charset="UTF-8" />
     <title>Regisztárció</title>
-    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="style/style_urlap.css"/>
 </head>
 <body>
-    <form action="urlap.html" method="post" enctype="multipart/form-data" autocomplete="off"><br/>
-        <label>Felhasználónév: <input type="text" name="fnev" maxlength="20" required/></label><br/>
-        <label>E-mail cím: <input type="email" name="email"/></label><br/>
-        <label>Jelszó: <input type="password" name="pwd" maxlength="20" required/></label><br/>
-        <label>Jelszó még egyszer: <input type="password" name="pwd_again" maxlength="20" required/></label><br/>
-        <label>Születési idő: <input type="date" name="bdate" required/></label><br/>
-        <fieldset>
-            <legend>Nem kiválasztása</legend>
-            <label><input type="radio" name="no"/>Nő</label>
-            <label><input type="radio" name="ferfi"/>Férfi</label>
-        </fieldset>
-    </form>
+    <header>
+        <h1>Regisztrációs űrlap</h1>
+    </header>
+    <main>
+        <form action="urlap.html" method="post" enctype="multipart/form-data" autocomplete="off">
+            <div class="fontos">
+                <strong>A (*)-al jelölt mezők kitöltése kötelező</strong>
+            </div>
+            <div class="input-container">
+                <label>Felhasználónév: <span>*</span>
+                    <input type="text" name="fnev" maxlength="20" required autocomplete="off"/>
+                </label>
+            </div>
+            <div class="input-container">
+                <label>E-mail cím:
+                    <input type="email" name="email" autocomplete="off"/>
+                </label>
+            </div>
+            <div class="input-container">
+                <label>Jelszó: <span>*</span>
+                    <input type="password" name="pwd" maxlength="20" required autocomplete="off"/>
+                </label>
+                <label>Jelszó még egyszer:
+                    <input type="password" name="pwd_again" maxlength="20" autocomplete="off"/>
+                </label>
+            </div>
+            <div class="input-container">
+                <label>Születési idő:
+                    <input type="date" name="bdate" />
+                </label>
+            </div>
+            <fieldset>
+                <legend>Nem kiválasztása</legend>
+                <label><input type="radio" name="nem"/>Nő</label>
+                <label><input type="radio" name="nem"/>Férfi</label>
+            </fieldset>
+            <input id="gomb" type="submit" name="submit" value="Submit" />
+        </form>
+    </main>
     <footer>Készítette: <span>Bán Attila</span></footer>
 </body>
 </html>
