@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Bán Attila" />
     <title>Regisztárció</title>
+    <link rel="icon" href="img/registration_icon.png"/>
     <link rel="stylesheet" href="style/style_urlap.css"/>
 </head>
 <body>
-    <header>
-        <h1>Regisztrációs űrlap</h1>
-    </header>
-    <main>
-        <form action="urlap.html" method="post" enctype="multipart/form-data" autocomplete="off">
-            <div class="fontos">
-                <strong>A (*)-al jelölt mezők kitöltése kötelező</strong>
-            </div>
-            <div class="input-container">
-                <label>Felhasználónév: <span>*</span>
-                    <input type="text" name="fnev" maxlength="20" required autocomplete="off"/>
-                </label>
-            </div>
-            <div class="input-container">
-                <label>E-mail cím:
-                    <input type="email" name="email" autocomplete="off"/>
-                </label>
-            </div>
-            <div class="input-container">
-                <label>Jelszó: <span>*</span>
-                    <input type="password" name="pwd" maxlength="20" required autocomplete="off"/>
-                </label>
-                <label>Jelszó még egyszer:
-                    <input type="password" name="pwd_again" maxlength="20" autocomplete="off"/>
-                </label>
-            </div>
-            <div class="input-container">
-                <label>Születési idő:
-                    <input type="date" name="bdate" />
-                </label>
-            </div>
-            <fieldset>
-                <legend>Nem kiválasztása</legend>
-                <label><input type="radio" name="nem"/>Nő</label>
-                <label><input type="radio" name="nem"/>Férfi</label>
-            </fieldset>
-            <input id="gomb" type="submit" name="submit" value="Submit" />
-        </form>
-    </main>
-    <footer>Készítette: <span>Bán Attila</span></footer>
+<header>
+    <h1>Regisztrációs űrlap</h1>
+</header>
+<main>
+    <form action="urlap.html" method="post" enctype="multipart/form-data" autocomplete="off">
+        <div class="fontos">
+            <strong>A (*)-al jelölt mezők kitöltése kötelező</strong>
+        </div>
+        <div class="input-container">
+            <label>Felhasználónév: <span>*</span>
+                <input type="text" name="fnev" maxlength="20" required autocomplete="off"
+                       placeholder="Sanyi"/>
+            </label>
+        </div>
+        <div class="input-container">
+            <label>E-mail cím:
+                <input type="email" name="email" autocomplete="off" placeholder="example@anything.hu" />
+            </label>
+        </div>
+        <div class="input-container">
+            <label>Jelszó: <span>*</span>
+                <input type="password" name="pwd" maxlength="20" required autocomplete="off"
+                       placeholder="Minimum 8 karakter"/>
+            </label>
+            <label>Jelszó még egyszer:
+                <input type="password" name="pwd_again" maxlength="20" autocomplete="off"
+                       placeholder="********"/>
+            </label>
+        </div>
+        <div class="input-container">
+            <label>Születési idő:
+                <input type="date" name="bdate" min="1990-01-01" max="2003-01-01" value="1990-01-01"/>
+            </label>
+        </div>
+        <div class="input-container">
+            <label id="file-feltoltes">Profilkép feltöltése <img src="img/upload.png" alt="upload"/>
+                <input type="file" name="kep"/>
+            </label>
+        </div>
+        <fieldset>
+            <legend>Nem kiválasztása</legend>
+            <label><input type="radio" name="nem"/>Nő</label>
+            <label><input type="radio" name="nem"/>Férfi</label>
+        </fieldset>
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+</main>
+<footer>Készítette:
+    <mark>Bán Attila</mark>
+</footer>
 </body>
 </html>
