@@ -1,0 +1,171 @@
+html {
+    background-color: #ddd;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+.fontos {
+    position: relative;
+    left: 10%;
+    font-size: 120%;
+    color: darkred;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: right;
+    color: slategray;
+}
+
+footer mark {
+    background-color: inherit;
+    font-size: 90%;
+    font-style: italic;
+    text-decoration: slategray solid underline;
+}
+
+main {
+    width: 40%;
+    margin: 10px auto;
+    background-color: #cccccc;
+    border-radius: 10px;
+    border: 5px solid #aaa;
+}
+
+input[type=text], input[type=password], input[type=date], input[type=email] {
+    position: relative;
+    min-width: 10%;
+    width: 70%;
+    left: 50px;
+    display: block;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+input:required {
+    background-color: #fdc4c4;
+}
+
+input:required:focus{
+    cursor: pointer;
+    outline: none;
+    animation-name: requiredInputSotetedik;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+input:optional {
+    background-color: #e0ffe9;
+}
+input:optional:focus{
+    cursor: pointer;
+    outline: none;
+    animation-name: optionalInputSotetedik;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+label {
+    position: relative;
+    left: 5%;
+    color: #444;
+    margin: 10px;
+    display: block;
+}
+
+label span {
+    display: inline;
+    color: darkred;
+}
+
+.input-container {
+    width: 80%;
+    margin: 8px auto;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.input-container label:hover {
+    cursor: pointer;
+    animation-name: labhover;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: 110%;
+}
+
+fieldset {
+    margin-top: 20px;
+    position: relative;
+    left: 100px;
+    background-color: #aaa;
+    width: 50%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+fieldset label {
+    position: relative;
+    left: 30px;
+}
+
+fieldset legend {
+    position: relative;
+    left: 60px;
+    color: #444;
+}
+
+input[type=submit]{
+    background-color: #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    border: 3px solid #444444;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    left: 40%;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    color: #aaa;
+    background-color: #444;
+}
+
+input[type=file]{
+    display: none;
+}
+
+#file-feltoltes{
+    animation: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+img{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+@keyframes labhover {
+    from { color: #444; }
+    to { color: #bbb; }
+}
+@keyframes optionalInputSotetedik {
+    from{ background-color: #e0ffe9; }
+    to{ background-color: #a1ffbb; }
+}
+
+@keyframes requiredInputSotetedik {
+    from{ background-color: #fdc4c4; }
+    to{ background-color: #ff8d8d; }
+}
