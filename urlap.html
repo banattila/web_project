@@ -6,9 +6,18 @@
     <link rel="stylesheet" href="style/style.css"/>
 </head>
 <body>
-    <form action="urlap.html" method="post" enctype="multipart/form-data" autocomplete="off">
-        <label>Felhasználónév: <input type="text" name="fnev" maxlength="20" required/></label>
-        <label>Jelszó: <input type="password" name="pwd" maxlength="20" required/></label>
+    <form action="urlap.html" method="post" enctype="multipart/form-data" autocomplete="off"><br/>
+        <label>Felhasználónév: <input type="text" name="fnev" maxlength="20" required/></label><br/>
+        <label>E-mail cím: <input type="email" name="email"/></label><br/>
+        <label>Jelszó: <input type="password" name="pwd" maxlength="20" required/></label><br/>
+        <label>Jelszó még egyszer: <input type="password" name="pwd_again" maxlength="20" required/></label><br/>
+        <label>Születési idő: <input type="date" name="bdate" required/></label><br/>
+        <fieldset>
+            <legend>Nem kiválasztása</legend>
+            <label><input type="radio" name="no"/>Nő</label>
+            <label><input type="radio" name="ferfi"/>Férfi</label>
+        </fieldset>
     </form>
+    <footer>Készítette: <span>Bán Attila</span></footer>
 </body>
 </html>
